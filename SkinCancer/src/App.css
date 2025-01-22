@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  background-image: url("./assets/gallery/department.png");
+}
+a {
+  text-decoration: none;
+}
+.header-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.header-line .line {
+  height: 2px;
+  width: 60px;
+  background-color: #0d6efd;
+  margin-right: 30px;
+}
+.header-line .text {
+  font-size: 22px;
+  font-weight: 500;
+  color: #0d6efd;
+  word-spacing: 3px;
+  letter-spacing: 5px;
+}
+
+@media (max-width: 500px) {
+  .header-line .text {
+    font-size: 14px;
+  }
+  .header-line .line {
+    height: 2px;
+    width: 40px;
+    margin-right: 10px;
+  }
+}

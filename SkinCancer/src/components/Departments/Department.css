@@ -1,0 +1,51 @@
+.department-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+h1{
+  color: rgb(5, 5, 20);
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+.card{
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.card:hover{
+  background-color: #0d6efd;
+}
+.cards .icon{
+  width: 48px;
+  height: 48px;
+  color: #0d6efd;
+  margin-top: 25px;
+}
+.card:hover .icon,
+.card:hover .card-title{
+  color: #fff;
+}
+.cards .card-title{
+  color: #296EB8;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 500px) {
+  h1{
+    font-size: 30px;
+  }
+}
