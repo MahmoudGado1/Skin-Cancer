@@ -16,16 +16,16 @@ const Dashboard = () => {
       img:Skin
     },
     {
-      name: "mahmoud",
+      name: "ali",
       age:30,
       phone:"029394893424",
       address:"Cairo Egypt",
-      doctor:"ali",
+      doctor:"ahmed",
       status:"Benign",
       img:Skin
     },
     {
-      name: "mahmoud",
+      name: "mohamed",
       age:30,
       phone:"029394893424",
       address:"Cairo Egypt",
@@ -34,7 +34,7 @@ const Dashboard = () => {
       img:Skin
     },
     {
-      name: "mahmoud",
+      name: "eslam",
       age:30,
       phone:"029394893424",
       address:"Cairo Egypt",

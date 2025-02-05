@@ -17,6 +17,8 @@ const Register = () => {
     gender: "",
     password: "",
   });
+  const [role, setRole] = useState("user"); // Default role
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -115,6 +117,13 @@ const Register = () => {
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                 </select>
+                <div className="role-container">
+              <select name="role" value={role} onChange={(e) => setRole(e.target.value)}>
+                <option value="">Role</option>
+                <option value="User">User</option>
+                <option value="Doctor">Doctor</option>
+              </select>
+            </div>
                 <input
                   type="password"
                   name="password"

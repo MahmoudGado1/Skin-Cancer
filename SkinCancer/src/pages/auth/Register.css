@@ -86,7 +86,9 @@
   outline: none;
   transition: border-color 0.3s ease;
 }
-
+.register-container select {
+  cursor: pointer;
+}
 .register-container input:focus,
 .register-container select:focus {
   border-color: #0d6efd;

@@ -79,18 +79,18 @@ function Header() {
                   </Nav.Link>
                   <Link>
                   </Link>
-                  <NavDropdown title="Department" id="offcanvasNavbarDropdown">
+                  <NavDropdown title="Type Of Disease" id="offcanvasNavbarDropdown">
                     <NavDropdown.Item>
-                      <Link to={"/dentistry"}>Dentistry</Link>
+                      <Link to={"/basal-cell-carcinoma"}>Basal Cell Carcinoma</Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item>
-                      <Link to={"/ent-specialists"}>ENT Specialists</Link>
+                      <Link to={"/squamous-cell-carcinoma"}>Squamous Cell Carcinoma</Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item>
-                      <Link to={"/neuroantomy"}>Neuroantomy</Link>
+                      <Link to={"/melanoma"}>Melanoma</Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item>
-                      <Link to={"/astrology"}>Astrology</Link>
+                      <Link to={"/merkel-cell-carcinoma"}>Merkel Cell Carcinoma</Link>
                     </NavDropdown.Item>
                   </NavDropdown>
                   <Nav.Link>

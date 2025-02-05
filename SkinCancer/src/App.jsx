@@ -10,11 +10,12 @@ import SkinCancerPage from "./pages/SkinCancer/SkinCancer";
 import Header from "./components/Header/Header";
 import DoctorsPage from "./pages/Doctors/Doctors";
 import Footer from "./components/Footer/Footer";
-import ENTPage from "./pages/ENT/ENT";
-import DentistryPage from "./pages/Dentistry/Dentistry";
-import NeuroantomyPage from "./pages/Neuroantomy/Neuroantomy";
-import AstrologyPage from "./pages/Astrology/Astrology";
 import ScrollToTop from "./components/Common/scrollatTop";
+import NotFound from "./components/NotFound";
+import MelanomaPage from "./pages/Melanoma/Melanoma";
+import BasalCarcinomaPage from "./pages/BasalCarcinoma/BasalCarcinoma";
+import MerkelCarcinomaPage from "./pages/MerkelCarcinoma/MerkelCarcinoma";
+import SquamousCarcinomaPage from "./pages/SquamousCarcinoma/SquamousCarcinoma";
 const App = () => {
   return (
     <>
@@ -25,13 +26,14 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/skin-cancer" element={<SkinCancerPage />} />
-          <Route path="/dentistry" element={<DentistryPage />} />
-          <Route path="/ent-specialists" element={<ENTPage />} />
-          <Route path="/neuroantomy" element={<NeuroantomyPage />} />
-          <Route path="/astrology" element={<AstrologyPage />} />
+          <Route path="/basal-cell-carcinoma" element={<BasalCarcinomaPage />} />
+          <Route path="/squamous-cell-carcinoma" element={<SquamousCarcinomaPage/>} />
+          <Route path="/merkel-cell-carcinoma" element={<MerkelCarcinomaPage />} />
+          <Route path="/melanoma" element={<MelanomaPage />} />
           <Route path="/doctors" element={<DoctorsPage />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
         <Footer/> 
         <ToastContainer position="top-center" />

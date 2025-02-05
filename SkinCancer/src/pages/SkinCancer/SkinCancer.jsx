@@ -4,7 +4,7 @@ import SkinCancer from "../../components/SkinCancer/SkinCancer";
 const SkinCancerPage = () => {
   return (
     <div>
-      <BgSection message={"Skin "} position={"Skin Cancer"}/>
+      <BgSection message={"Skin Cancer"} position={"Skin Cancer"}/>
       <SkinCancer />
     </div>
   );

@@ -13,6 +13,7 @@ header {
 .navbar-brand:hover {
   transform: translateX(4px);
 }
+
 .navbar-nav a {
   font-size: 19px;
   color: #383f4b;
@@ -24,10 +25,10 @@ header {
   color: #5095f3;
 }
 .dropdown {
-  margin-left: 2px;
+  text-align: center;
 }
 .dropdown-menu {
-  width: 200px;
+  width: 260px;
   border: 0;
   box-shadow: 1px 4px 5px 2px rgba(0, 0, 0, 0.3);
   transition: 0.4s;
@@ -37,7 +38,7 @@ header {
 .dropdown-menu a {
   font-size: 17px;
   font-weight: 500;
-  width: 80%;
+  width: 90%;
   transition: 0.3s;
 }
 .dropdown-menu a:hover {
@@ -53,5 +54,17 @@ form button {
   }
   .navbar-nav a {
     margin-left: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  form button{
+    margin: auto;
+    width: 190px;
   }
 }
