@@ -177,7 +177,7 @@ body {
   align-items: center;
   border-radius: 20px;
   background: #b5b5ff;
-  padding: 20px 20px 0 10px;
+  padding: 15px 20px 0 10px;
 }
 .dashboard .banner:first-child .firstBox img {
   height: 100%;
@@ -190,7 +190,6 @@ body {
   display: flex;
   align-items: center;
   font-size: 34px;
-  margin-bottom: 12px;
 }
 .dashboard .banner:first-child .firstBox .content div p {
   margin-right: 10px;
@@ -417,6 +416,30 @@ body {
 }
 .wrapper .hamburger {
   display: none;
+}
+.sidebar .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.icon {
+  font-size: 50px;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.active {
+  background-color: white; 
+  color: #0d6efd;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
 }
 
 @media (max-width: 1208px) {

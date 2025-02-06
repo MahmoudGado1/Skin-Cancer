@@ -3,6 +3,8 @@ import { Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import "./Register.css";
 import Logo from "../../assets/logo/logo.png";
+import { toast } from "react-toastify";
+import { CheckCircle2Icon } from "lucide-react";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -40,9 +42,22 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-
-    // Navigate to the login page after successful submission
+    toast.success("Register successful!", {
+      position: "top-center",
+      style: {
+        color: "#0d6efd",
+      },
+      icon: <CheckCircle2Icon />,
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progressStyle: {
+        background: 'linear-gradient(to right, #87CEEB, #0d6efd)',
+        height: '4px',
+      },
+    });
     navigate("/login");
   };
 

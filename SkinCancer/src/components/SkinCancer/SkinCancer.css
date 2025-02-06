@@ -7,30 +7,33 @@
   /* margin-top: 50px; */
   height: 80vh;
 }
-
-.upload-image{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-.upload-image .icon{
-  width: 35px;
-  height: 35px;
-}
-.drop-area {
-  width: 300px;
-  height: 200px;
-  border: 2px dashed #5c5c5c;
-  background-color: #fff;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  position: relative;
+} 
+select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 3px #0b4294;
+}
+
+.drop-area {
+  width: 350px;
+  height: 200px;
+  border: 2px dashed #0d6efd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .drop-area p {
@@ -44,8 +47,8 @@
 }
 
 .selected-image {
-  width: 200px;
-  height: 100px;
+  width: 345px;
+  height: 170px;
   border-radius: 10px;
 }
 
@@ -89,6 +92,9 @@ button:disabled {
   color: #666;
   cursor: not-allowed;
   transform: none; 
+}
+button:disabled:hover {
+  background-color: #ccc; 
 }
 
 .skin-cancer{
@@ -145,10 +151,6 @@ button:disabled {
   .data-patient input {
     width: 350px; 
   }
-  .drop-area {
-    width: 250px;
-    height: 180px; 
-  }
   .skin-cancer h1 {
     font-size: 28px; 
     margin-bottom: 40px;
@@ -161,10 +163,6 @@ button:disabled {
   }
   .data-patient input {
     width: 100%; 
-  }
-  .drop-area {
-    width: 200px;
-    height: 150px; 
   }
 }
 
@@ -198,6 +196,11 @@ button:disabled {
     width: 30px;
     height: 30px; 
   }
+  .selected-image {
+    width: 295px;
+    height: 170px;
+    border-radius: 10px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -209,3 +212,121 @@ button:disabled {
     font-size: 20px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.drop-area.active {
+  background: rgba(13, 110, 253, 0.1);
+}
+
+.upload-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.upload-image .icon {
+  font-size: 40px;
+  color: #0d6efd;
+}
+
+.selected-image-container {
+  position: relative;
+}
+
+
+
+.selected-image-container button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  cursor: pointer;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.send-btn,
+.camera-btn {
+  background: #0d6efd;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.send-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.send-btn:hover,
+.camera-btn:hover {
+  background: #0056b3;
+}
+
+/* Camera Styles
+.camera-container {
+  position: relative;
+  width: 30%;
+  max-width: 30%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+video {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.capture-btn,
+.stop-btn {
+  background: #28a745;
+  color: white;
+  padding: 8px 12px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.capture-btn:hover {
+  background: #218838;
+}
+
+.stop-btn {
+  background: #dc3545;
+}
+
+.stop-btn:hover {
+  background: #c82333;
+}
+
+/* Responsive Design */
+/* @media (max-width: 600px) {
+  .drop-area {
+    height: 150px;
+  }
+  .bt{
+    display: flex;
+  }
+}  */

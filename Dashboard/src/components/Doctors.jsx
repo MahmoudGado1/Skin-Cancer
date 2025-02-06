@@ -1,47 +1,51 @@
-export const doctors=[
+export const doctors = [
   {
-    firstName: "mahmoud",
-    lastName:"gado",
-    email:"mahmoud@gmail.com",
-    phone:"029394893424",
-    age:"33",
-    gender:"Male"
+    firstName: "Mohamed",
+    lastName: "Ali",
+    email: "moali@gmail.com",
+    phone: "029394893424",
+    age: "40",
+    gender: "Male",
+    img: "../../public/doc8.jpg",
   },
   {
-    firstName: "mahmoud",
-    lastName:"gado",
-    email:"mahmoud@gmail.com",
-    phone:"029394893424",
-    age:"33",
-    gender:"Male"
+    firstName: "Sara",
+    lastName: "ahmed",
+    email: "sara.ahmed@gmail.com",
+    phone: "029394893425",
+    age: "35",
+    gender: "Female",
+    img: "../../public/doc5.jpg",
   },
   {
-    firstName: "mahmoud",
-    lastName:"gado",
-    email:"mahmoud@gmail.com",
-    phone:"029394893424",
-    age:"33",
-    gender:"Male"
+    firstName: "Omar",
+    lastName: "Khaled",
+    email: "omar.khaled@gmail.com",
+    phone: "029394893426",
+    age: "45",
+    gender: "Female",
+    img: "../../public/doc6.jpg",
   },
   {
-    firstName: "mahmoud",
-    lastName:"gado",
-    email:"mahmoud@gmail.com",
-    phone:"029394893424",
-    age:"33",
-    gender:"Male"
+    firstName: "Aisha",
+    lastName: "Hassan",
+    email: "aisha.hassan@gmail.com",
+    phone: "029394893427",
+    age: "38",
+
+    gender: "Male",
+    img: "../../public/doc2.jpg",
   },
-]
+];
+
 const Doctors = () => {
-
-
   return (
     <section className="page doctors">
       <h1>DOCTORS</h1>
       <div className="banner">
         {doctors.map((element, index) => (
           <div key={index} className="card1">
-            <img src={"/doc6.jpg"} alt="doctor avatar" />
+            <img src={element.img} alt="doctor avatar" />
             <h4>{`${element.firstName} ${element.lastName}`}</h4>
             <div className="details">
               <p>

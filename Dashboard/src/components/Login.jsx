@@ -3,18 +3,35 @@ import { Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import Logo from "../assets/logo/logo.png";
+import { toast } from "react-toastify";
+import { PiCaretCircleUpDuotone } from "react-icons/pi";
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
 
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault(); 
+    toast.success("Login successful!", {
+      position: "top-center",
+      style: {
+        color: "#0d6efd",
+      },
+      icon: <PiCaretCircleUpDuotone />,
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progressStyle: {
+        background: 'linear-gradient(to right, #87CEEB, #0d6efd)',
+        height: '4px',
+      },
+    });
     navigate("/"); 
-    console.log(email, password, confirmPassword);
   };
 
   return (
@@ -51,12 +68,6 @@ const Login = () => {
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-              />
-              <input
-                type="password"
-                placeholder="Confirm Password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
               />
               <div className="link-container">
                 <p>Forget Password?</p>

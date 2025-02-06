@@ -17,7 +17,7 @@ const Department = () => {
         <h1>Our Medical Services</h1>
         <div className="cards">
         <Link to={"/skin-cancer"}>
-            <Card style={{ width: "14rem" }}>
+            <Card style={{ width: "11rem" }}>
               <FaHandsWash 
               className="icon"/>{" "}
               <Card.Body>
@@ -26,7 +26,7 @@ const Department = () => {
             </Card>
           </Link>
           <Link to={"/dentistry"}>
-            <Card style={{ width: "14rem" }}>
+            <Card style={{ width: "11rem" }}>
               <TbDental className="icon"/>{" "}
               <Card.Body>
                 <Card.Title>Dentistry</Card.Title>
@@ -34,7 +34,7 @@ const Department = () => {
             </Card>
           </Link>
           <Link to={"/ent-specialists"}>
-            <Card style={{ width: "14rem" }}>
+            <Card style={{ width: "11rem" }}>
               <EarIcon className="icon"/>{" "}
               <Card.Body>
                 <Card.Title>ENT Specialists</Card.Title>
@@ -42,7 +42,7 @@ const Department = () => {
             </Card>
           </Link>
           <Link to={"/neuroantomy"}>
-            <Card style={{ width: "14rem" }}>
+            <Card style={{ width: "11rem" }}>
               <BsLungsFill className="icon"/>{" "}
               <Card.Body>
                 <Card.Title>Neuroantomy</Card.Title>
@@ -50,7 +50,7 @@ const Department = () => {
             </Card>
           </Link>
           <Link to={"/astrology"}>
-            <Card style={{ width: "14rem" }}>
+            <Card style={{ width: "11rem" }}>
               <Bone className="icon"/>{" "}
               <Card.Body>
                 <Card.Title>Astrology</Card.Title>

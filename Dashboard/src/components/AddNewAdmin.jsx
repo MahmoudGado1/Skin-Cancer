@@ -1,5 +1,7 @@
 import {  useState } from "react";
 import Logo from "../assets/logo/logo.png"
+import { PiCaretCircleUpDuotone } from "react-icons/pi";
+import { toast } from "react-toastify";
 
 const AddNewAdmin = () => {
   const [firstName, setFirstName] = useState("");
@@ -11,7 +13,22 @@ const AddNewAdmin = () => {
 
   const handleAddNewAdmin=async(e)=>{
     e.preventDefault();
-  
+    toast.success("Add Admin successful!", {
+          position: "top-center",
+          style: {
+            color: "#0d6efd",
+          },
+          icon: <PiCaretCircleUpDuotone />,
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progressStyle: {
+            background: 'linear-gradient(to right, #87CEEB, #0d6efd)',
+            height: '4px',
+          },
+        });
   }
 
   return (

@@ -47,6 +47,23 @@ header {
 form button {
   width: 120px;
 }
+/* Header.css */
+.navbar-nav .nav-link a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link a:hover {
+  color: #0d6efd;
+}
+
+/* Active link styling */
+.active-link {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #0d6efd !important;
+}
 
 @media (min-width: 1100px) {
   .navbar-brand {

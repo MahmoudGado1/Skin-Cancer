@@ -14,9 +14,9 @@ const Home = () => {
       <main>
         <div className="container ">
           <div className="contant">
-            <div className="header-line">
+            <div className="header-line hh2">
               <span className="line" />
-              <span className="text">Advancing Medical Expertise</span>
+              <span className="text ho">Advancing Medical Expertise</span>
             </div>
             <h1 className="cd-headline">
             Empowering{" "}

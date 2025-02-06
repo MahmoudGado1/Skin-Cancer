@@ -1,21 +1,26 @@
 main {
   width: 100%;
-  height: 100vh;
+  height: 99vh;
+  margin-bottom: 200px;
 }
+
 main img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit:cover;
   margin-top: 60px;
 }
+
 .container .contant {
   position: absolute;
   top: 35%;
 }
+
 .contant .cd-headline {
   font-size: 40px;
   font-weight: 800;
 }
+
 .btn-appoint {
   width: 200px;
   height: 50px;
@@ -28,18 +33,67 @@ main img {
   margin-top: 20px;
   transition: 0.3s;
 }
-.contant p{
+
+.contant p {
   color: black;
   font-size: 19px;
 }
+
+/* Medium Screens (Tablets and Small Laptops) */
 @media (max-width: 992px) {
   .container .contant {
     top: 30%;
   }
-}
-@media (max-width: 500px) {
   .contant .cd-headline {
-    font-size: 40px;
-    font-weight: 800;
+    font-size: 35px;
+  }
+  .btn-appoint {
+    width: 180px;
+    height: 45px;
+    font-size: 16px;
+  }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 768px) {
+  .container .contant {
+    top: 25%;
+  }
+  .contant .cd-headline {
+    font-size: 30px;
+  }
+  .btn-appoint {
+    width: 160px;
+    height: 40px;
+    font-size: 15px;
+  }
+  .contant p {
+    font-size: 16px;
+  }
+}
+
+/* Extra Small Screens (Small Phones) */
+@media (max-width: 500px) {
+  .container .contant {
+    top: 28%;
+    text-align: center;
+    z-index: 5;
+  }
+  .contant .cd-headline {
+    font-size: 24px;
+  }
+  .btn-appoint {
+    width: 150px;
+    height: 38px;
+    font-size: 14px;
+  }
+  .contant p {
+    font-size: 14px;
+  }
+  main img {
+    object-fit:fill;
+    transform: scale(1.2);
+    margin-top: 100px;
+    filter: contrast(1.1) brightness(1); 
   }
 }

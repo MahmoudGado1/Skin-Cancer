@@ -15,7 +15,7 @@ const About = () => {
           <span className="text">About Our Company</span>
         </div>
         <div className="aboutBody">
-          <h1>We are developing a healthcare system around you</h1>
+          <h1>We are developing a healthcare system.</h1>
           <p>
             We think that everyone should have easy access to excellent
             healthcare. Our aim is to make the procedure as simple as possible

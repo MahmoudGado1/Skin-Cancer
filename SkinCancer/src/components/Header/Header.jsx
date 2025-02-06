@@ -9,58 +9,43 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Logo from "../../assets/logo/logo.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Header.css";
+
 function Header() {
   const location = useLocation();
-
-  const [showOffcanvas, setShowOffcanvas] = useState(false);
   const navigate = useNavigate();
-  const handleClose = () => {
-    setShowOffcanvas(false);
-  };
-  const handleShow = () => {
-    setShowOffcanvas(true);
-  };
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
 
-  const handleLogin = () => {
-    navigate("/login");
-  };
-  // Automatically close Offcanvas on large screens
+  const handleClose = () => setShowOffcanvas(false);
+  const handleShow = () => setShowOffcanvas(true);
+  const handleLogin = () => navigate("/login");
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 992) {
-        setShowOffcanvas(false); // Close Offcanvas when screen size is large or greater
+        setShowOffcanvas(false);
       }
     };
     window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize); // Cleanup on unmount
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Function to check if link is active
+  const isActive = (path) => location.pathname === path ? "active-link" : "";
 
   return (
     <header>
-      {location.pathname.includes("/login") ||
-      location.pathname.includes("/register") ? null : (
-        <Navbar expand="lg" className="bg-body-tertiary ">
+      {location.pathname.includes("/login") || location.pathname.includes("/register") ? null : (
+        <Navbar expand="lg" className="bg-body-tertiary">
           <Container fluid>
             <Navbar.Brand>
               <Link to={"/"}>
                 <img src={Logo} alt="medical" />
               </Link>
             </Navbar.Brand>
-            <Navbar.Toggle
-              aria-controls="offcanvasNavbar"
-              onClick={handleShow}
-            />
-            <Navbar.Offcanvas
-              id="offcanvasNavbar"
-              aria-labelledby="offcanvasNavbarLabel"
-              placement="start"
-              show={showOffcanvas}
-              onHide={handleClose}
-            >
+            <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} />
+            <Navbar.Offcanvas id="offcanvasNavbar" placement="start" show={showOffcanvas} onHide={handleClose}>
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id="offcanvasNavbarLabel">
+                <Offcanvas.Title>
                   <Link to={"/"}>
                     <img src={Logo} alt="medical" />
                   </Link>
@@ -68,33 +53,49 @@ function Header() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-center flex-grow-1 pe-3">
-                  <Nav.Link>
-                    <Link to={"/"}>Home</Link>
+                  <Nav.Link as="div">
+                    <Link to="/" className={isActive("/")} onClick={handleClose}>
+                      Home
+                    </Link>
                   </Nav.Link>
-                  <Nav.Link>
-                    <Link to={"/skin-Cancer"}>SkinCancer</Link>
+                  <Nav.Link as="div">
+                    <Link to="/skin-Cancer" className={isActive("/skin-Cancer")} onClick={handleClose}>
+                      Skin Cancer
+                    </Link>
                   </Nav.Link>
-                  <Nav.Link>
-                    <Link to={"/doctors"}>Doctors</Link>
+                  <Nav.Link as="div">
+                    <Link to="/doctors" className={isActive("/doctors")} onClick={handleClose}>
+                      Doctors
+                    </Link>
                   </Nav.Link>
-                  <Link>
-                  </Link>
+
                   <NavDropdown title="Type Of Disease" id="offcanvasNavbarDropdown">
                     <NavDropdown.Item>
-                      <Link to={"/basal-cell-carcinoma"}>Basal Cell Carcinoma</Link>
+                      <Link to="/basal-cell-carcinoma" className={isActive("/basal-cell-carcinoma")} onClick={handleClose}>
+                        Basal Cell Carcinoma
+                      </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item>
-                      <Link to={"/squamous-cell-carcinoma"}>Squamous Cell Carcinoma</Link>
+                      <Link to="/squamous-cell-carcinoma" className={isActive("/squamous-cell-carcinoma")} onClick={handleClose}>
+                        Squamous Cell Carcinoma
+                      </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item>
-                      <Link to={"/melanoma"}>Melanoma</Link>
+                      <Link to="/melanoma" className={isActive("/melanoma")} onClick={handleClose}>
+                        Melanoma
+                      </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item>
-                      <Link to={"/merkel-cell-carcinoma"}>Merkel Cell Carcinoma</Link>
+                      <Link to="/merkel-cell-carcinoma" className={isActive("/merkel-cell-carcinoma")} onClick={handleClose}>
+                        Merkel Cell Carcinoma
+                      </Link>
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link>
-                    <Link to={"/about"}>About</Link>
+
+                  <Nav.Link as="div">
+                    <Link to="/about" className={isActive("/about")} onClick={handleClose}>
+                      About
+                    </Link>
                   </Nav.Link>
                 </Nav>
                 <Form className="d-flex me-4">
@@ -112,3 +113,4 @@ function Header() {
 }
 
 export default Header;
+

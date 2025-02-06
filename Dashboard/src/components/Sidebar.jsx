@@ -3,7 +3,7 @@ import { FaUserDoctor } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoPersonAddSharp } from "react-icons/io5";
 import { MdAddModerator } from "react-icons/md";
-import { RiLogoutBoxFill } from "react-icons/ri";
+import { RiLoginCircleFill } from "react-icons/ri";
 import { TiHome } from "react-icons/ti";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -12,8 +12,9 @@ const Sidebar = () => {
   const navigateTo = useNavigate();
   const location = useLocation();
 
-  const handleLogout = async () => {
-    // Implement logout logic here
+  const handleLogin = async () => {
+    navigateTo("/login");
+    setShow(!show);
   };
 
   const gotoHomePage = () => {
@@ -42,11 +43,26 @@ const Sidebar = () => {
     <>
       <nav className={show ? "show sidebar" : "sidebar"}>
         <div className="links">
-          <TiHome onClick={gotoHomePage} />
-          <FaUserDoctor onClick={gotoDoctorsPage} />
-          <MdAddModerator onClick={gotoAddNewAdmin} />
-          <IoPersonAddSharp onClick={gotoAddNewDoctor} />
-          <RiLogoutBoxFill onClick={handleLogout} />
+          <TiHome
+            className={location.pathname === "/" ? "icon active" : "icon"}
+            onClick={gotoHomePage}
+          />
+          <FaUserDoctor
+            className={location.pathname === "/doctors" ? "icon active" : "icon"}
+            onClick={gotoDoctorsPage}
+          />
+          <MdAddModerator
+            className={location.pathname === "/admin/addnew" ? "icon active" : "icon"}
+            onClick={gotoAddNewAdmin}
+          />
+          <IoPersonAddSharp
+            className={location.pathname === "/doctor/addnew" ? "icon active" : "icon"}
+            onClick={gotoAddNewDoctor}
+          />
+          <RiLoginCircleFill
+            className={location.pathname === "/login" ? "icon active" : "icon"}
+            onClick={handleLogin}
+          />
         </div>
       </nav>
       <div className="wrapper">
