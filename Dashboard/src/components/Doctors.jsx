@@ -6,7 +6,7 @@ export const doctors = [
     phone: "029394893424",
     age: "40",
     gender: "Male",
-    img: "../../public/doc8.jpg",
+    img: "/public/doc8.jpg",
   },
   {
     firstName: "Sara",
@@ -15,7 +15,7 @@ export const doctors = [
     phone: "029394893425",
     age: "35",
     gender: "Female",
-    img: "../../public/doc5.jpg",
+    img: "/public/doc5.jpg",
   },
   {
     firstName: "Omar",
@@ -24,7 +24,7 @@ export const doctors = [
     phone: "029394893426",
     age: "45",
     gender: "Female",
-    img: "../../public/doc6.jpg",
+    img: "/public/doc6.jpg",
   },
   {
     firstName: "Aisha",
@@ -34,14 +34,14 @@ export const doctors = [
     age: "38",
 
     gender: "Male",
-    img: "../../public/doc2.jpg",
+    img: "/public/doc2.jpg",
   },
 ];
 
 const Doctors = () => {
   return (
     <section className="page doctors">
-      <h1>DOCTORS</h1>
+      <h1>DOCTORS</h1> 
       <div className="banner">
         {doctors.map((element, index) => (
           <div key={index} className="card1">

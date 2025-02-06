@@ -96,4 +96,7 @@ main img {
     margin-top: 100px;
     filter: contrast(1.1) brightness(1); 
   }
+  .header-line.hh2{
+    text-align: center;
+  }
 }
