@@ -6,16 +6,16 @@ export const doctors = [
     phone: "029394893424",
     age: "40",
     gender: "Male",
-    img: "/src/assets/doc8.jpg",
+    img: "/images/doc8.jpg", // ✅ Correct path
   },
   {
     firstName: "Sara",
-    lastName: "ahmed",
+    lastName: "Ahmed",
     email: "sara.ahmed@gmail.com",
     phone: "029394893425",
     age: "35",
     gender: "Female",
-    img: "/src/assets/doc5.jpg",
+    img: "/images/doc5.jpg", // ✅ Correct path
   },
   { 
     firstName: "Omar",
@@ -23,8 +23,8 @@ export const doctors = [
     email: "omar.khaled@gmail.com",
     phone: "029394893426",
     age: "45",
-    gender: "Female",
-    img: "/src/assets/doc6.jpg",
+    gender: "Male",
+    img: "/images/doc6.jpg", // ✅ Correct path
   },
   {
     firstName: "Aisha",
@@ -32,11 +32,11 @@ export const doctors = [
     email: "aisha.hassan@gmail.com",
     phone: "029394893427",
     age: "38",
-
-    gender: "Male",
-    img: '/src/assets/doc2.jpg',
+    gender: "Female",
+    img: "/images/doc2.jpg", // ✅ Correct path
   },
 ];
+
 
 const Doctors = () => {
   return (
