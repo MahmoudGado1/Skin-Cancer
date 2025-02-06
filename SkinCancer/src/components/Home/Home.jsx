@@ -16,7 +16,7 @@ const Home = () => {
           <div className="contant">
             <div className="header-line hh2">
               <span className="line" />
-              <span className="text ho">Advancing Medical Expertise</span>
+              <span className="text ho">Advancing Medical</span>
             </div>
             <h1 className="cd-headline">
             Empowering{" "}
