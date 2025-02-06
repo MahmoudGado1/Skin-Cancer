@@ -6,7 +6,7 @@ export const doctors = [
     phone: "029394893424",
     age: "40",
     gender: "Male",
-    img: "/public/doc8.jpg",
+    img: "/doc8.jpg",
   },
   {
     firstName: "Sara",
@@ -15,16 +15,16 @@ export const doctors = [
     phone: "029394893425",
     age: "35",
     gender: "Female",
-    img: "/public/doc5.jpg",
+    img: "/doc5.jpg",
   },
-  {
+  { 
     firstName: "Omar",
     lastName: "Khaled",
     email: "omar.khaled@gmail.com",
     phone: "029394893426",
     age: "45",
     gender: "Female",
-    img: "/public/doc6.jpg",
+    img: "/doc6.jpg",
   },
   {
     firstName: "Aisha",
@@ -34,7 +34,7 @@ export const doctors = [
     age: "38",
 
     gender: "Male",
-    img: "/public/doc2.jpg",
+    img: "/doc2.jpg",
   },
 ];
 
